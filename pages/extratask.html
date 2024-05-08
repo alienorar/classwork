@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Css/extratask.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <!-- Extra Task2 -->
+    <section>
+        <div class="container">
+            <div class="slider">
+                <div class="boxes">
+                    <div class="slider_img">
+                        <img class="mySlides" src="../images/logo1.webp" alt="">
+                        <img class="mySlides" src="../images/logo2.webp" alt="">
+                        <img class="mySlides" src="../images/logo3.webp" alt="">
+                        <img class="mySlides" src="../images/logo4.webp" alt="">
+                        <img class="mySlides" src="../images/logo5.webp" alt="">
+                        <img class="mySlides" src="../images/logo6.webp" alt="">
+
+                        <div class="boxes_btn"> <button class="w3-button w3-black w3-display-left"
+                                onclick="plusDivs(-1)">&#10094;</button>
+                            <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+                        </div>
+
+
+                    </div>
+                    <div class="slider_info">
+                        <h3>Extra task2</h3>
+                        <div class="slider_desc"><span><i class="fa-regular fa-heart"></i></span>
+
+                            <h4>9 May 2024 by Raykhona Khayrullaeva</h4>
+                        </div>
+
+                        <p>The only moment, the only life we have is in the NOW. What happened a few moments or several
+                            years ago is gone, what will happen this evening, or next month when we go on holidays is
+                            not
+                            here yet.</p>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- JS -->
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
+    <!-- Extra Task2 end -->
+</body>
+
+</html>
